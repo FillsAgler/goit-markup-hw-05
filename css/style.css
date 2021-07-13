@@ -743,7 +743,7 @@ body {
 .projects-list-item:focus .project-list-description{
    transform: translate(0);
    transition:background-color 250ms var(--timing-function),
-               transform 550ms var(--timing-function);
+            transform 550ms var(--timing-function);
 }
 /*--------------------Modal__________ModalWindow__________Model*/
 .backdrop-modal-window {
@@ -755,14 +755,13 @@ body {
    background-color: rgba(0, 0, 0, 0.2);
 
    opacity: 1;
-   transition: opacity 250ms var(--animation-cube);
+   transition: opacity 450ms var(--animation-cube);
 }
 .backdrop-modal-window.is-hidden {
    opacity: 0;
    pointer-events: none;
 }
 .modal-window {
-   padding: 35px;
    position: absolute;
    top: 50%;
    left: 50%;
@@ -770,15 +769,20 @@ body {
 
    min-width: 528px;
    min-height: 581px;
+   padding: 35px;
 
-   background: #ffffff;
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 4px;
+   background: #ffffff;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+               0px 1px 1px rgba(0, 0, 0, 0.14), 
+               0px 2px 1px rgba(0, 0, 0, 0.2);
 
-   transition: transform 250ms var(--animation-cube);
+   transition: transform 450ms var(--animation-cube),
+               opacity 450ms var(--timing-function);
 }
 .backdrop-modal-window.is-hidden.modal-window {
    transform: translate(-50%, -50%) scale(0.9);
+   transition: transform 450ms var(--timing-function);
 }
 .close-window {
    position: absolute;
